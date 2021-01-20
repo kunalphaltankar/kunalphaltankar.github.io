@@ -4,14 +4,36 @@ import "./App.css";
 
 function App() {
 	return (
-		<div className="text-center bg-gray-400">
-			<h1 className="text-5xl">Hi! I am Kunal Phaltankar.</h1>
-
-			<h1 className="text-2xl m-5">
-				I develop websites and mobile apps. Mostly in Javascript.
+		<div className="text-center bg-gray-800 h-screen text-white">
+			<h1 className="text-2xl font-bold leading-tight lg:text-4xl lg:leading-none text-zenith">
+				Hello, I’m Kunal Phaltankar.
 			</h1>
 
-			<div className="flex items-center justify-center w-full mt-32 md:mt-72">
+			<div className="leading-loose">
+				<p className="mt-32">
+					I’m a Software Engineer currently working as React / React
+					Native developer at
+					<a
+						href="https://www.sarvasv.in/"
+						target="_blank"
+						rel="noopener"
+						className="underline text-zenith ml-1"
+					>
+						Sarvasv
+					</a>
+					. I mostly do front-end development, and I’m a
+					<a
+						href="https://reactjs.org/"
+						rel="noopener"
+						className="underline text-zenith ml-1 mr-1"
+					>
+						React.js
+					</a>
+					and CSS nerd. I love to build games using React.
+				</p>
+			</div>
+
+			<div className="flex absolute bottom-0 items-center justify-center w-full mt-32 md:mt-72">
 				<ul className="flex flex-col -mx-16 text-zenith md:flex-row">
 					<li className="mx-16">
 						<a
