@@ -5,6 +5,7 @@ import background from "../assets/pexels-simon-matzinger-1323550.jpg";
 function ProfileCard(props: any) {
 	return (
 		<div
+			id="container"
 			className="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover flex"
 			style={{ backgroundImage: `url(${background})` }}
 		>
@@ -178,7 +179,34 @@ function ProfileCard(props: any) {
 
 				{/* <!-- Pin to top right corner --> */}
 				<div className="absolute top-0 right-0 h-12 w-18 p-4">
-					<button className="js-change-theme focus:outline-none">
+					<button
+						className="js-change-theme focus:outline-none"
+						onClick={() => {
+							const toggle = document.querySelector(
+								".js-change-theme"
+							);
+							const container = document.getElementById(
+								"container"
+							);
+							const profile = document.getElementById("profile");
+
+							if (
+								container?.classList.contains("text-gray-900")
+							) {
+								if (!!toggle) toggle.innerHTML = "☀️";
+								container.classList.remove("text-gray-900");
+								container.classList.add("text-gray-100");
+								profile?.classList.remove("bg-white");
+								profile?.classList.add("bg-gray-900");
+							} else {
+								if (!!toggle) toggle.innerHTML = "🌙";
+								container?.classList.remove("text-gray-100");
+								container?.classList.add("text-gray-900");
+								profile?.classList.remove("bg-gray-900");
+								profile?.classList.add("bg-white");
+							}
+						}}
+					>
 						🌙
 					</button>
 				</div>
