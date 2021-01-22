@@ -5,7 +5,7 @@ import background from "../assets/pexels-simon-matzinger-1323550.jpg";
 function ProfileCard(props: any) {
 	return (
 		<div
-			className="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover"
+			className="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover flex"
 			style={{ backgroundImage: `url(${background})` }}
 		>
 			<div className="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
